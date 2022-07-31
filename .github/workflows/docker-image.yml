@@ -28,9 +28,9 @@ jobs:
           with:
             resource-group: ${{ secrets.RESOURCE_GROUP_ZAFARAPP }}
             dns-name-label: ${{ secrets.RESOURCE_GROUP_ZAFARAPP }}${{ github.run_number }}
-            image: ${{ secrets.REGISTRY_LOGIN_SERVER_ZAFARAPP }}/sampleapp:${{ github.sha }}
+            image: ${{ secrets.REGISTRY_LOGIN_SERVER_ZAFARAPP }}/zafarapp:${{ github.sha }}
             registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER_ZAFARAPP }}
             registry-username: ${{ secrets.REGISTRY_USERNAME_ZAFARAPP }}
             registry-password: ${{ secrets.REGISTRY_PASSWORD_ZAFARAPP }}
-            name: aci-sampleapp
+            name: aci-zafarapp
             location: 'west us'
