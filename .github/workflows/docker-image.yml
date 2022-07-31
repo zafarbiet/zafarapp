@@ -22,7 +22,7 @@ jobs:
             password: ${{ secrets.REGISTRY_PASSWORD_ZAFARAPP }}
         - run: |
             docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER_ZAFARAPP }}/sampleapp:${{ github.sha }}
-            docker push ${{ secrets.REGISTRY_LOGIN_SERVE_ZAFARAPP }}/sampleapp:${{ github.sha }}
+            docker push ${{ secrets.REGISTRY_LOGIN_SERVER_ZAFARAPP }}/sampleapp:${{ github.sha }}
         - name: 'Deploy to Azure Container Instances'
           uses: 'azure/aci-deploy@v1'
           with:
